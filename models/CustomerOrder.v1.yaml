@@ -1,0 +1,8 @@
+title: CustomerOrder
+type: object
+description: Decr
+properties:
+  id:
+    type: string
+  asd:
+    type: string

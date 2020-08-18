@@ -1,0 +1,63 @@
+openapi: 3.0.0
+info:
+  title: Orders
+  version: '1.0'
+  description: 'srihari'
+  contact:
+    name: srihari
+    url: sri.com
+    email: s@gamil.com
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /v1/orders:
+    get:
+      summary: Your GET endpoint
+      tags:
+        - v1
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+        '501':
+          description: Not Implemented
+        '502':
+          description: Bad Gateway
+        '503':
+          description: Service Unavailable
+      operationId: get-v1-orders
+      description: 'sirari'
+      parameters:
+        - schema:
+            type: number
+          in: query
+          name: orderid
+          description: Id of the order
+    post:
+      summary: 'asa'
+      operationId: post-v1-orders
+      responses:
+        '200':
+          description: OK
+components:
+  schemas: {}
+  securitySchemes:
+    jwt:
+      name: API Key
+      type: apiKey
+      in: query
+security:
+  - jwt: []
+tags:
+  - name: v1
